@@ -1,11 +1,32 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+function excusaAleatoria() {
+  var sujeto = [
+    "MI PERRA ",
+    "UN DINOSAURIO ",
+    "AYUSO ",
+    "MI TUTOR ",
+    "MI PAREJA "
+  ];
+  var verbo = ["ME ROMPIÓ ", "SE COMIÓ ", "PERDIÓ ", "QUEMÓ ", "OLVIDÓ "];
+  var predicado = [
+    "EL ORDENADOR.",
+    "MI COCHE.",
+    "LAS LLAVES.",
+    "MIS ILUSIONES.",
+    "A MI ABUELA."
+  ];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  console.log(
+    sujeto[Math.floor(Math.random() * (5 - 1))] +
+      verbo[Math.floor(Math.random() * (5 - 1))] +
+      predicado[Math.floor(Math.random() * (5 - 1))]
+  );
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  return (
+    sujeto[Math.floor(Math.random() * (5 - 1))] +
+    verbo[Math.floor(Math.random() * (5 - 1))] +
+    predicado[Math.floor(Math.random() * (5 - 1))]
+  );
+}
+document.querySelector("#boton").addEventListener("click", () => {
+  document.querySelector("#frase").innerHTML = excusaAleatoria();
+});
